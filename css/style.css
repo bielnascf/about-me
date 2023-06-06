@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+
+/* Background */
+body, html {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('../src/dark-mode.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Conteúdo principal */
+.container {
+    width: 80vw;
+    height: 70vh;
+    margin: auto;
+    padding-top: 100px;
+
+}
+
+.container img {
+    display: block;
+    margin: auto;
+    width: 150px;
+    margin-top: 20px;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.container h1 {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+
+    color: rgb(255, 255, 255);
+}
+
+.container ul {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+.container ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.container ul li a:hover {
+    background-color: rgb(255, 255, 255, 0.05);
+}
+
+/* Redes Sociais */
+
+.socialmedia {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.socialmedia ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+
+
+    list-style: none;
+}
+
+.socialmedia img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+.github-icon {
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+}
+
+.github-icon:hover {
+    transform: scale(1.2);
+}
+
+.linkedin-icon {
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+}
+
+.linkedin-icon:hover {
+    transform: scale(1.2);
+}
+
+
+.instagram-icon {
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+}
+
+.instagram-icon:hover {
+    transform: scale(1.2);
+}
+
+.email-icon {
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+}
+
+.email-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Rodapé */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    height: 100px;
+}
+
+/* Botões Dark e Light mode */
+.container-button {
+    width: 100%;
+    text-align: center;
+}
+
+span {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+#lightMode {display:none}
