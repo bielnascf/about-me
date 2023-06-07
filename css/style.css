@@ -55,6 +55,7 @@ body {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.205);
 
     color: var(--text-color);
 }
