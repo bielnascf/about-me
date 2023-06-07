@@ -19,6 +19,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
 
     transition: background 0.3s ease;
 }
@@ -34,7 +35,7 @@ body {
 /* Conteúdo principal */
 .container {
     width: 80vw;
-    height: 70vh;
+    height: 665px;
     margin: auto;
     padding-top: 100px;
 
@@ -94,7 +95,6 @@ body {
 
 .socialmedia {
     width: 100%;
-    margin-top: 50px;
 }
 
 .socialmedia ul {
