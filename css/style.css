@@ -1,15 +1,34 @@
 @charset "UTF-8";
 
 
+:root {
+    --text-color: white;
+    --background-url: url('../src/dark-mode.jpg');
+    --border-color: rgba(255, 255, 255, 0.5);
+    --filter-invert: invert(1);
+    --border-image: rgba(255, 255, 255, 0.377);
+}
+
+
 /* Background */
-body, html {
+body {
     width: 100vw;
     height: 100vh;
 
-    background-image: url('../src/dark-mode.jpg');
+    background-image: var(--background-url);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    transition: background 0.3s ease;
+}
+
+.light {
+    --text-color: black;
+    --background-url: url('../src/light-mode.jpg');
+    --border-color: rgba(0, 0, 0, 0.24);
+    --filter-invert: none;
+    --border-image: rgba(0, 0, 0, 0.411);
 }
 
 /* Conteúdo principal */
@@ -25,8 +44,9 @@ body, html {
     display: block;
     margin: auto;
     width: 150px;
+    height: 150px;
     margin-top: 20px;
-    border: 1px solid rgb(255, 255, 255, 0.5);
+    border: 1px solid var(--border-image);
     border-radius: 50%;
 }
 
@@ -35,7 +55,7 @@ body, html {
     padding: 10px;
     margin-top: 20px;
 
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
 }
 
 .container ul {
@@ -54,11 +74,11 @@ body, html {
     padding: 10px;
 
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
 
     background-color: rgba(255, 255, 255, 0.1);
     
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 
     backdrop-filter: blur(4px);
@@ -67,13 +87,14 @@ body, html {
 
 .container ul li a:hover {
     background-color: rgb(255, 255, 255, 0.05);
+    border: 1.5px solid var(--text-color);
 }
 
 /* Redes Sociais */
 
 .socialmedia {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 .socialmedia ul {
@@ -94,7 +115,7 @@ body, html {
 
 
 .github-icon {
-    filter: invert(1);
+    filter: var(--filter-invert);
     transition: 0.3s ease-in-out;
 }
 
@@ -103,7 +124,7 @@ body, html {
 }
 
 .linkedin-icon {
-    filter: invert(1);
+    filter: var(--filter-invert);
     transition: 0.3s ease-in-out;
 }
 
@@ -113,7 +134,7 @@ body, html {
 
 
 .instagram-icon {
-    filter: invert(1);
+    filter: var(--filter-invert);
     transition: 0.3s ease-in-out;
 }
 
@@ -121,12 +142,12 @@ body, html {
     transform: scale(1.2);
 }
 
-.email-icon {
-    filter: invert(1);
+.whatsapp-icon {
+    filter: var(--filter-invert);
     transition: 0.3s ease-in-out;
 }
 
-.email-icon:hover {
+.whatsapp-icon:hover {
     transform: scale(1.2);
 }
 
@@ -136,19 +157,19 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     height: 100px;
 }
 
 /* Botões Dark e Light mode */
 .container-button {
-    width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 span {
-    filter: invert(1);
+    filter: var(--filter-invert);
     cursor: pointer;
 }
 
-#lightMode {display:none}
+#darkButton {display:none}
